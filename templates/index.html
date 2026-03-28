@@ -6,11 +6,15 @@
 <body>
     <h1>在庫一覧</h1>
     <a href="/add">商品追加</a>
-    <a href="/alert">要発注のみ</a>
+    <a href="/alert">要発注リスト</a>
 
     <table border="1">
         <tr>
-            <th>商品</th><th>在庫</th><th>基準値</th><th>状態</th><th>操作</th>
+            <th>商品</th>
+            <th>在庫</th>
+            <th>基準値</th>
+            <th>状態</th>
+            <th>操作</th>
         </tr>
         {% for p in products %}
         <tr style="background-color: {% if p[3] <= p[4] %}red{% else %}white{% endif %};">
